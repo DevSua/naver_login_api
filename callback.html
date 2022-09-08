@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var naver_id_login = new naver_id_login(
         "r3z_uVq4BNNmtdUWEiT7",
-        "http://127.0.0.1:5500/callback.html"
+        "http://127.0.0.1:5500/login_hi.html"
       );
       // 접근 토큰 값 출력
       alert(naver_id_login.oauthParams.access_token);
@@ -26,9 +26,9 @@
         alert(naver_id_login.getProfileData("email"));
         alert(naver_id_login.getProfileData("name"));
         alert(naver_id_login.getProfileData("nickname"));
-        alert(naver_id_login.getProfileData("number"));
         alert(naver_id_login.getProfileData("age"));
         alert(naver_id_login.getProfileData("birthday"));
+         window.location.replace("http://" + window.location.hostname + ( (location.port==""||location.port==undefined)?"":":" + location.port) + "/login_hi.html");
       }
     </script>
   </body>
